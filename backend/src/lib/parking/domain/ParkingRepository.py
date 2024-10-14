@@ -1,35 +1,13 @@
 from abc import ABC, abstractmethod
-from src.lib.parking.domain.Vehicle import VehicleType
+from src.lib.parking.domain.Parking import Parking
+from src.lib.parking.domain.Client import Client
+from src.lib.parking.domain.Vehicle import VehicleType, Vehicle
 
 
 class ParkingRepository(ABC):
     
     @abstractmethod
-    async def register(licensePlate: str, vehicleType: VehicleType, model: str, color: str, cc: str, fullName: str, email: str):
-        pass
-    
-    @abstractmethod
-    async def getClientById(clientID: str):
-        pass
-    
-    @abstractmethod
-    async def registerClient(fullName: str, email: str):
-        pass
-    
-    @abstractmethod
-    async def modifyClient(clientID: str, fullName: str, email: str):
-        pass
-    
-    @abstractmethod
-    async def getVehicleByLicensePlate(licensePlate: str):
-        pass
-    
-    @abstractmethod
-    async def modifyVehicle(licenseID: str, vehicleType: VehicleType, model: str, color: str):
-        pass
- 
-    @abstractmethod
-    async def registerVehicle(licensePlate: str, type: VehicleType, model: str, color: str):
+    async def register(parkingData: Parking):
         pass
     
     @abstractmethod
@@ -37,7 +15,11 @@ class ParkingRepository(ABC):
         pass
     
     @abstractmethod
-    async def modify(parkingID: str, licensePlate: str, vehicleType: VehicleType, model: str, color: str, cc: str, fullName: str, email: str):
+    async def getOneById(parkingID: str):
+        pass
+    
+    @abstractmethod
+    async def update(parkingData: Parking):
         pass
     
     @abstractmethod
@@ -46,4 +28,20 @@ class ParkingRepository(ABC):
     
     @abstractmethod
     async def exit(parkingID: str):
+        pass
+    
+    @abstractmethod
+    async def getClientById(clientID: str):
+        pass
+    
+    @abstractmethod
+    async def saveClient(clientData: Client):
+        pass
+    
+    @abstractmethod
+    async def getVehicleByLicensePlate(licensePlate: str):
+        pass
+ 
+    @abstractmethod
+    async def saveVehicle(licensePlate: str, type: VehicleType, model: str, color: str):
         pass

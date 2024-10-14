@@ -1,4 +1,6 @@
 from typing import Optional
+
+from pydantic import BaseModel
 from src.lib.parking.domain.Client import Client
 from src.lib.parking.domain.Vehicle import Vehicle
 from datetime import datetime
@@ -11,7 +13,7 @@ class ParkingState(Enum):
     DELETED = "BORRADO"
     
 
-class Parking:
+class Parking(BaseModel):
     id: str
     vehicleData: Vehicle
     clientData: Client

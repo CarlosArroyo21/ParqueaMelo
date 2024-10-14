@@ -1,10 +1,13 @@
 from enum import Enum
 
+from pydantic import BaseModel
+
 class VehicleType(Enum):
     MOTORBIKE = "MOTO"
     CAR = "AUTOMOVIL"
 
-class Vehicle:
+class Vehicle(BaseModel):
+    id: str
     licensePlate: str
     type: VehicleType
     model: str
@@ -16,6 +19,8 @@ class Vehicle:
         self.model = model
         self,color = color
     
+    def setId(self, newId: str):
+        self.id = newId
 
 
     
