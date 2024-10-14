@@ -35,11 +35,8 @@ class PostgresAuthRepository(AuthRepository):
                     "statusCode": 200,
                     "message": "Usuario autenticado correctamente."
                 }
-                print(response)
         return response
-        
-
-
+    
     async def register(self, name: str, email: str, password: str):
         with self.initConnection() as conn:
             with conn.cursor() as cursor:
@@ -59,5 +56,4 @@ class PostgresAuthRepository(AuthRepository):
                     "message": "Usuario registrado correctamente."
                 }
                 
-                print(response)
         return response
