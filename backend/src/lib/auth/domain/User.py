@@ -1,5 +1,5 @@
 class AuthUser:
-   def __init__(self, nombre, email, contraseña): 
-      self.nombre = nombre
+   def __init__(self, name, email, password): 
+      self.name = name
       self.email = email
-      self.contraseña = contraseña
+      self.password = password
