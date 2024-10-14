@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
-from src.lib.parking.domain.Parking import Parking
-from src.lib.parking.domain.Client import Client
-from src.lib.parking.domain.Vehicle import VehicleType, Vehicle
+from .Parking import Parking
+from .Client import Client
+from .Vehicle import Vehicle
 
 
 class ParkingRepository(ABC):
@@ -43,5 +43,5 @@ class ParkingRepository(ABC):
         pass
  
     @abstractmethod
-    async def saveVehicle(licensePlate: str, type: VehicleType, model: str, color: str):
+    async def saveVehicle(vehicleData: Vehicle):
         pass
