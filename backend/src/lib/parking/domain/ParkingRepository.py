@@ -19,7 +19,7 @@ class ParkingRepository(ABC):
         pass
     
     @abstractmethod
-    async def update(parkingData: Parking):
+    async def getOneByLicensePlate(licensePlate: str):
         pass
     
     @abstractmethod
@@ -31,16 +31,9 @@ class ParkingRepository(ABC):
         pass
     
     @abstractmethod
-    async def getClientById(clientID: str):
+    async def saveClient(self, clientData: Client):
         pass
     
-    @abstractmethod
-    async def saveClient(clientData: Client):
-        pass
-    
-    @abstractmethod
-    async def getVehicleByLicensePlate(licensePlate: str):
-        pass
  
     @abstractmethod
     async def saveVehicle(vehicleData: Vehicle):

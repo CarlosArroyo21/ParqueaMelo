@@ -8,14 +8,16 @@ class ParkingQueryUseCase:
         try:
             
             # parkingResponse: {
+            #     responseData: list[Parking]
             #     statusCode: int
             #     message: str
-            #     parkingList: Parking[]
             # }
             parkingResponse = await self.parkingRepository.getAll()
-        except:
-            
-            pass
-        finally:
             return parkingResponse
+        except Exception as error:
+            return {
+                "responseData": None,
+                "statusCode": 500,
+                "message": error.__str__()
+            }
         

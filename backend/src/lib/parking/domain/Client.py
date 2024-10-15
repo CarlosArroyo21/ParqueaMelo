@@ -1,9 +1,14 @@
-from pydantic import BaseModel
+from typing import Optional
 
 
-class Client(BaseModel):
-    id: str
-    def __init__(self, cc: str ,fullName: str ,email: str):
+class Client():
+    id: Optional[str]
+    cc: str
+    fullName: str
+    email: str
+    
+    def __init__(self, cc: str ,fullName: str ,email: str, id: Optional[str] = None):
+        self.id = id
         self.cc = cc
         self.fullName = fullName
         self.email = email

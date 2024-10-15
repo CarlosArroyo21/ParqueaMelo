@@ -1,5 +1,5 @@
 from datetime import datetime
-from src.lib.parking.domain.Parking import Parking
+from src.lib.parking.api.models.ParkingModel import ParkingModel
 from src.lib.parking.domain.ParkingRepository import ParkingRepository
 
 
@@ -7,39 +7,42 @@ class ParkingRegisterUseCase:
     def __init__(self, parkingRepository: ParkingRepository):
         self.parkingRepository = parkingRepository
     
-    async def execute(self, parkingData: Parking):
+    async def execute(self, parkingDataModel: ParkingModel):
         try:
+            
+            parkingDataDomain = parkingDataModel.toDomain()
+            parkingDataDomain.setEntranceDate(datetime.now())
             
             # clientResponse: {
             #     responseData: {
-            #         newId: int,
+            #         clientID: int,
             #     } || None,
             #     statusCode: int
             #     message: str
             # }
-            clientResponse = await self.parkingRepository.saveClient(parkingData.clientData)
+            clientResponse = await self.parkingRepository.saveClient(parkingDataDomain.clientData)
+            
             
             # vehicleResponse: {
             #     responseData: {
-            #         newId: int,
+            #         vehicleID: int,
             #     } || None,
             #     statusCode: int
             #     message: str
-            # }
-            vehicleResponse = await self.parkingRepository.saveVehicle(parkingData.vehicleData)
+            # }parkingData
+            vehicleResponse = await self.parkingRepository.saveVehicle(parkingDataDomain.vehicleData)
             
-            parkingData.clientData.setId(clientResponse["newId"])
-            parkingData.vehicleData.setId(vehicleResponse["newId"])
+            parkingDataDomain.clientData.setId(str(clientResponse["responseData"]["clientID"]))
+            parkingDataDomain.vehicleData.setId(vehicleResponse["responseData"]["vehicleID"])
             
             # parkingResponse: {
-            #     responseData: None,
+            #     responseData: Parking,
             #     statusCode: int
             #     message: str
             # }
-            parkingResponse = await self.parkingRepository.register(parkingData)
-        except:
-            
-            pass
-        finally:
+            parkingResponse = await self.parkingRepository.register(parkingDataDomain)
             return parkingResponse
+        except Exception as e:
+            raise e
+            pass
         

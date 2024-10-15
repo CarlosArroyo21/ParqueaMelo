@@ -13,8 +13,10 @@ class ParkingQueryByIdUseCase:
             #     message: str
             # }
             parkingResponse = await self.parkingRepository.getOneById(parkingID)
-        except:
-            
-            pass
-        finally:
             return parkingResponse
+        except Exception as error:
+            return {
+                "responseData": None,
+                "statusCode": 500,
+                "message": error.__str__()
+            }

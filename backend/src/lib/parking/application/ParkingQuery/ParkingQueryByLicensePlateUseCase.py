@@ -1,6 +1,6 @@
 from src.lib.parking.domain.ParkingRepository import ParkingRepository
 
-class ParkingDeleteUseCase:
+class ParkingQueryByLicensePlateUseCase:
     def __init__(self, parkingRepository: ParkingRepository):
         self.parkingRepository = parkingRepository
     
@@ -8,12 +8,12 @@ class ParkingDeleteUseCase:
         try:
             
             # parkingResponse: {
-            #     responseData: None,
+            #     responseData: Parking,
             #     statusCode: int
             #     message: str
             # }
-            parkingResponse = await self.parkingRepository.delete(parkingID)
-            return parkingResponse
+            vehicleResponse = await self.parkingRepository.getOneByLicensePlate(parkingID)
+            return vehicleResponse
         except Exception as error:
             return {
                 "responseData": None,

@@ -5,8 +5,6 @@ from src.lib.auth.domain.User import AuthUser
 from src.lib.auth.domain.UserErrors import ExistingUser, IncorrectCredentials
 from ..domain.AuthRepository import AuthRepository
 
-connectionData={"host":"localhost", "dbname":"ParqueaMeloDB", "user":"postgres", "password":"admin", "port":5432}
-
 class PostgresAuthRepository(AuthRepository):
 
     def __init__(self, connectionData):
