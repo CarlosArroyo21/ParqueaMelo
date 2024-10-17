@@ -1,0 +1,106 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form {
+  width: 30%;
+  padding: 4%;
+  background-color: #f0f4fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #316c8c;
+}
+
+.login-form p {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #6e6e6e;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #316c8c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.login-button i {
+  margin-right: 10px;
+}
+
+.login-button:hover {
+  background-color: #254b61;
+}
+
+.register-link {
+  margin-top: 20px;
+  color: #316c8c;
+}
+
+.register-link a {
+  color: #316c8c;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-image {
+  font-family: "Chau Philomene One";
+  width: 70%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.login-image h2 {
+  font-size: 2.5rem;
+  color: #316c8c;
+}
+
+.login-image p {
+  font-size: 1.2rem;
+  color: #6e6e6e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-image img {
+  width: 70%;
+  max-width: 70%;
+}
