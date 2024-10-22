@@ -2,7 +2,7 @@ from enum import Enum
 from typing import Optional
 
 class VehicleType(Enum):
-    MOTORBIKE = "MOTO"
+    MOTORBIKE = "MOTOCICLETA"
     CAR = "AUTOMOVIL"
 
 class Vehicle():
