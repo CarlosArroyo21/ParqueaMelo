@@ -1,0 +1,160 @@
+.history-main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("/src/assets/images/Entry.webp");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center; /* Centra la imagen */
+}
+
+.history-main-container h1 {
+  padding-top: 5%;
+
+  font-family: "Chau Philomene One";
+  font-size: 70px;
+  font-weight: normal;
+
+  text-align: center;
+  color: #2485b5;
+  margin: 0px;
+}
+
+.history-main-container pre {
+  font-family: "Akshar";
+  font-size: 20px;
+  font-weight: normal;
+
+  text-align: center;
+  color: #6e6e6e;
+  margin: 0px;
+}
+/*------------------------------------------------*/
+
+.history-content-container {
+  width: 50%;
+  height: 50%;
+  padding: 1%;
+  margin: 0;
+
+  display: flex; /* Agrega esta propiedad */
+  flex-direction: column;
+  align-items: center; /* Agrega esta propiedad */
+
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.history-content-container h2 {
+  font-family: "Chau Philomene One";
+  font-size: 36px;
+  font-weight: normal;
+  color: #2485b5;
+  margin: 0;
+}
+
+.history-search {
+  width: 40%;
+  height: 8%;
+  padding: 1%;
+
+  margin: 1% 0 2% 0;
+  font-size: 1rem;
+
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.history-search:focus {
+  border: 1px solid #9e9e9e;
+}
+
+/*============================================================*/
+
+.history-container-list{
+  width: 95%;
+  height: 70%;
+
+  padding: 1%;
+  
+  border-radius: 30px;
+  border: 1px solid #808080;
+
+  display: flex; /* Cambia esto para que funcione con flexbox */
+  flex-direction: column;
+}
+
+.history-list {
+  flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio disponible */
+  overflow-y: auto;
+}
+
+.history-list::-webkit-scrollbar {
+  width: 10px; /* Ancho del scroll */
+}
+
+/* Estilo del "thumb" (la parte que se arrastra) */
+.history-list::-webkit-scrollbar-thumb {
+  background-color: #2485b5; /* Color del scroll */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #ffffff; /* Espacio alrededor del scroll */
+}
+
+/* Estilo del fondo del scroll */
+.history-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Fondo de la barra */
+  border-radius: 10px;
+}
+
+/* Estilo cuando se activa el scroll (hover o active) */
+.history-list::-webkit-scrollbar-thumb:hover {
+  background-color: #025f8d; /* Cambia el color al pasar el ratón */
+}
+/*===============================================================================================================*/
+.history-item {
+  padding: 3%;
+  margin: 1%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info,
+.user-id,
+.car-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span,
+.user-id span,
+.car-info span {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.license-plate {
+  background-color: #ffd700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.user-icon,
+.id-icon {
+  width: 24px;
+  height: 24px;
+}
+

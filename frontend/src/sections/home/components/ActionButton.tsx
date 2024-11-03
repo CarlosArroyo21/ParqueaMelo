@@ -16,13 +16,12 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 }) => {
   const iconName = icon.split("/").pop();
   return (
-    <div className="action-button" onClick={onClick}>
-      <div className="action-button-icon">
-        
+    <div className="home-ActionButton" onClick={onClick}>
+      <div className="home-ActionButton-icons-row">
         {iconName === "Exit.svg" && (
           <ReactSVG
             src={icon}
-            className="action-icon"
+            className="home-ActionButton-icon"
             beforeInjection={(svg) => {
               svg.setAttribute("style", `fill: ${color}`);
             }}
@@ -31,25 +30,25 @@ const ActionButton: React.FC<ActionButtonProps> = ({
         {iconName === "Cars.svg" || (
           <ReactSVG
             src={"/src/assets/icons/Car.svg"}
-            className="action-icon"
+            className="home-ActionButton-icon"
             beforeInjection={(svg) => {
-              svg.setAttribute("style", `fill: ${color}`); 
+              svg.setAttribute("style", `fill: ${color}`);
             }}
           />
         )}
         {iconName === "Cars.svg" && (
           <ReactSVG
             src={icon}
-            className="action-icon"
+            className="home-ActionButton-icon"
             beforeInjection={(svg) => {
-              svg.setAttribute("style", `fill: ${color}`); 
+              svg.setAttribute("style", `fill: ${color}`);
             }}
           />
         )}
         {iconName === "Entry.svg" && (
           <ReactSVG
             src={icon}
-            className="action-icon"
+            className="home-ActionButton-icon"
             beforeInjection={(svg) => {
               svg.setAttribute("style", `fill: ${color}`); // Aquí aplicamos el color
             }}

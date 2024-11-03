@@ -1,0 +1,84 @@
+.home-main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.home-button-group {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: end; /* Centra Horizontal*/
+  justify-content: center; /* Centra verticalmente */
+}
+
+.home-ActionButton {
+  width: 50%;
+  height: 25%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra Horizontal*/
+  justify-content: center; /* Centra verticalmente */
+ 
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* horizontOffset verticalOffset blurRadius color */
+
+  cursor: pointer;
+  margin-right: 5px;
+
+  transition: 0.2s;
+}
+
+.home-ActionButton:active {
+  transform: translateY(4px); /* Simular un movimiento hacia abajo */
+}
+
+.home-ActionButton p {
+  font-family: "Akshar";
+  padding-top: 15px;
+  color: #2485B5;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.home-ActionButton-icons-row {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centra Horizontal*/
+  justify-content: center; /* Centra verticalmente */
+  flex-direction: row;
+}
+
+.home-ActionButton-icon {
+  width: 30%;
+  height: 30%;
+  margin-right: 10px;
+}
+/*-----------------------------------------------------*/
+.home-fondo {
+  font-family: "Chau Philomene One";
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-fondo h2 {
+  margin: 0;
+  font-size: 70px;
+  color: #2485b5;
+}
+
+.home-fondo p {
+  font-family: "Akshar";
+  font-size: 20px;
+  color: #888888;
+  text-align: center;
+}
+
+.home-fondo img {
+  max-width: 80%;
+  color: #2485b5;
+}

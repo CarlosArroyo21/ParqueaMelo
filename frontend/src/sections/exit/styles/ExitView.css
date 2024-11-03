@@ -1,0 +1,188 @@
+.exit-main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("/src/assets/images/Entry.webp");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center; /* Centra la imagen */
+  align-items: center;
+  background-color: #fefefe;
+}
+
+.exit-main-container h1 {
+  padding-top: 5%;
+  font-family: "Chau Philomene One";
+  font-size: 70px;
+  font-weight: normal;
+  color: #2485b5;
+  margin: 0px;
+}
+.exit-main-container pre {
+  font-family: "Akshar";
+  margin: 0px;
+  font-size: 20px;
+  color: #6e6e6e;
+  text-align: center;
+}
+/*---------------------------------------*/
+.exit-container-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exit-container-form h2 {
+  font-family: "Chau Philomene One";
+  font-size: 36px;
+  font-weight: normal;
+  color: #2485b5;
+  margin-top: 10px;
+}
+
+/*---------------------------------------*/
+.exit-plate-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 50%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  justify-content: start;
+}
+
+.exit-data-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /*Diferencia la entre los contenedores*/
+  height: 50%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  justify-content: start;
+}
+
+.exit-form-group {
+  width: 80%;
+}
+
+.exit-form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.exit-form-row .exit-form-group {
+  width: 25%;
+}
+
+.exit-container-form label {
+  font-family: "Akshar";
+  font-weight: normal;
+  font-size: 18px;
+  color: #000;
+  display: block;
+}
+
+.exit-container-form input,
+.exit-container-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  background-color: #efefef;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.exit-container-form select {
+  appearance: none; /* Oculta el selector nativo*/
+  background-image: url("/src/assets/icons/Arrow.svg"); /* Agrega la flecha */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: right 10px center; /* Posición de la flecha */
+  background-size: 40px; /* Tamaño de la flecha*/
+  padding-right: 40px; /* Espacio para la flecha*/
+  -webkit-appearance: none; /* Para Safari */
+  -moz-appearance: none; /* Para Firefox*/
+}
+
+.exit-container-form input:focus {
+  border: 1px solid #9e9e9e;
+}
+.exit-container-form select:focus {
+  border: 1px solid #9e9e9e;
+}
+
+.exit-container-form input::placeholder {
+  color: #ccc;
+}
+/**=========================================================*/
+.exit-form-input-row {
+  display: flex; /* Hace que el input y el ícono estén en línea */
+  align-items: center; /* Centra verticalmente */
+  position: relative;
+}
+
+.exit-action-icon {
+  width: 25px;
+  align-items: center;
+  position: absolute; /* Coloca el ícono sobre el input */
+  right: 10px; /* Espacio desde el lado derecho del input */
+}
+
+/*---------------------------------------*/
+
+.exit-btn {
+  width: 200px;
+  height: 50px;
+  margin: 25px 0 25px 0;
+
+  border: none;
+  border-radius: 50px 50px 20px 20px; /* Bordes redondeados */
+
+  color: white;
+  background-color: #2485b5;
+
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  font-family: "Akshar";
+  font-weight: normal;
+}
+
+.exit-btn:hover {
+  background-color: #1c709b;
+}
+
+.exit-btn-icon {
+  margin: 5px 5px 0 0;
+  width: 30%;
+}
+
+/*-------------------------------------------------*/
+
+.exit-buttonBack {
+  position: absolute;
+  margin: 15px;
+  width: 3%;
+  height: 4%;
+  background-color: #2485b5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Akshar";
+  border-radius: 100% 10px 10px 100%; /* Bordes redondeados */
+  transition: 0.5s ease;
+}
+

@@ -1,26 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import HistoryView from "./sections/history/HistoryView";
+
+import EntranceView from "./sections/entrance/EntranceView";
+import ExitView from "./sections/exit/ExitView";
+import TicketView from "./sections/ticket/TicketView";
 import Login from "./sections/user/Login";
 import Signup from "./sections/user/Signup";
-import Home from "./sections/home/Home";
-import Entry from "./sections/entry/Entry";
+import HomePage from "./sections/home/HomeView";
 
 function App() {
   return (
-    <Entry/>
-    // <Router>
-    //   <div className="App">
-    //     <Routes>
-    //       {/* Ruta para el componente de Login */}
-    //       <Route path="/login" element={<Login />} />
-          
-    //       {/* Ruta para el componente de Registro */}
-    //       <Route path="/register" element={<Signup />} />
-          
-    //       {/* Ruta por defecto para redirigir a login */}
-    //       <Route path="*" element={<Login />} />
-    //     </Routes>
-    //   </div>
-    // </Router>
+    <HistoryView/>
   );
 }
 
