@@ -2,6 +2,13 @@ import "../user/styles/Login.css";
 import imageHome from "../../assets/images/Home.webp";
 import { useState } from "react";
 import { ReactSVG } from "react-svg";
+import { useNavigate } from "react-router-dom";
+
+import { createUserService } from "../../lib/user/aplication/UserService.ts";
+import { CreateHttpUserRepository } from "../../lib/user/infrastructure/HttpUserRepository.ts";
+
+// Crear una instancia de UserService con HttpUserRepository
+const userService = createUserService(CreateHttpUserRepository());
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -10,9 +17,25 @@ export default function Signup() {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const navigate = useNavigate(); // Inicializar el hook de navegación
+
   const handleSignup: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     //Aquí va la logica de autenticación
+    try {
+      // Llamar al servicio para registrar el usuario
+      const result = await userService.signup(name, email, password);
+
+      if (result === 201) {
+        navigate("/login");
+      }else{
+        alert("Error al registrear usuario");
+      }
+
+      // Puedes redirigir o limpiar el formulario aquí
+    } catch (error) {
+      alert("Error al registrar usuario");
+    }
   };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -101,7 +124,7 @@ export default function Signup() {
         </button>
         {/*Mensaje*/}
         <div className="login-register-link">
-          Ya tengo una cuenta, <a href="/login">¡Inicia sesión aquí!</a>
+          Ya tengo una cuenta, <a href="/">¡Inicia sesión aquí!</a>
         </div>
       </form>
       {/*Fondo*/}

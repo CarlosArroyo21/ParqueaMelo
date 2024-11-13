@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { createClientService } from "../../lib/client/aplication/ClientService";
-import { CreateHttpClientRepository } from "../../lib/client/infrastructure/HttpClientRepository";
-import { Client } from "../../lib/client/domain/Client";
+import { createClientService } from "../../lib/user/aplication/UserService";
+import { CreateHttpClientRepository } from "../../lib/client/user/infrastructure/HttpUserRepository";
+import { Client } from "../../lib/client/infrastructure/domain/User";
 
 const repository = CreateHttpClientRepository();
 const service = createClientService(repository);

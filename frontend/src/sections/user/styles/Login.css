@@ -55,8 +55,9 @@
 
 .input-icon-container {
   display: flex; /* Hace que el input y el ícono estén en línea */
-  align-items: end; /* Centra verticalmente */
+  align-items: center; /* Centra verticalmente */
   position: relative; /* Para permitir la posición absoluta del ícono */
+  
 }
 
 .input-icon-container input {
@@ -80,7 +81,6 @@
   right: 10px; /* Espacio desde el lado derecho del input */
   cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
 }
-
 
 /*-------------------------------*/
 .login-button {
